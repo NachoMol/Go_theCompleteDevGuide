@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // Create a new type of deck
 // which is a slice of strings
@@ -32,5 +35,5 @@ func deal(d deck, handsize int) (deck, deck) {
 }
 
 func (d deck) toString() string {
-	return "delete this"
+	return strings.Join([]string(d), ",")
 }
